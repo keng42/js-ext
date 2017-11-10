@@ -14,3 +14,8 @@ const da = new Date('1989-04-05T12:02:03Z');
 assert(da.toTimeString() === '20:02:03', 'toTimeString');
 assert(da.toChinaISOString() === '1989-04-05 20:02:03', 'toChinaISOString');
 assert(da.toChineseISOString() === '1989年04月05日 20:02:03', 'toChineseISOString');
+
+const start = Date.now();
+global.delay(1000).then(() => {
+  assert(Date.now() - start > 1000, 'delay');
+});

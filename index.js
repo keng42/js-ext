@@ -1,7 +1,7 @@
 /* eslint import/no-dynamic-require:off */
 /* eslint global-require:off */
 
-const clss = ['date', 'number'];
+const clss = ['date', 'number', 'delay'];
 
 module.exports = (...args) => {
   if (args.length === 0) {
