@@ -19,3 +19,20 @@ const start = Date.now();
 global.delay(1000).then(() => {
   assert(Date.now() - start > 1000, 'delay');
 });
+
+const objs = {
+  String: '',
+  Number: 1,
+  Boolean: true,
+  Undefined: undefined,
+  Null: null,
+  Function: () => {},
+  Date: new Date(),
+  Array: [],
+  RegExp: new RegExp(),
+  Error: new Error(),
+};
+
+Object.keys(objs).forEach((type) => {
+  assert(global[`is${type}`](objs[type]), true);
+});
