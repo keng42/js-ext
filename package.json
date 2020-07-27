@@ -1,15 +1,48 @@
 {
   "name": "js-ext",
-  "version": "2.0.2",
-  "description": "js extensions for mt",
-  "main": "index.js",
+  "version": "3.0.0-alpha.0",
+  "description": "Some commonly used js functions",
+  "main": "lib/cjs/index.js",
+  "typings": "lib/cjs/index.d.ts",
+  "module": "lib/esm/index.js",
+  "browser": "lib/browser/js-ext.bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register test/**/*.spec.ts",
+    "clean": "rm -rf ./lib/*",
+    "build-browser": "tsc -p tsconfig-browser.json",
+    "build-node": "tsc -p tsconfig.json && tsc -p tsconfig-esm.json",
+    "build": "npm run clean && npm run build-node && npm run build-browser",
+    "smart-publish": "sh publish.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:keng42/js-ext.git"
+    "url": "git+ssh://git@github.com/keng42/js-ext.git"
   },
+  "keywords": [
+    "utilities",
+    "date",
+    "number",
+    "sleep"
+  ],
   "author": "keng42",
-  "license": "ISC"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keng42/js-ext/issues"
+  },
+  "homepage": "https://github.com/keng42/js-ext#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^8.0.0",
+    "@types/node": "^14.0.23",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "chai": "^4.2.0",
+    "eslint": "^7.5.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "mocha": "^8.0.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
 }
