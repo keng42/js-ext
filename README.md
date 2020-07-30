@@ -10,7 +10,7 @@ Some commonly used js functions
 ## Usage
 
 ```ts
-import * as jsExt from 'js-ext';
+import jsExt from 'js-ext';
 
 // number
 jsExt.pad(6); // '06'
@@ -49,4 +49,17 @@ jsExt.ts6(da); // '200203'
 (async () => {
   await jsExt.sleep(1000, 'say hi');
 })();
+```
+
+### Browser
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/almond@0.3.3/almond.min.js"></script>
+<script src="./js-ext.bundle.js"></script>
+
+<script>
+  const jsExt = require('js-ext');
+
+  console.log(jsExt.ts(new Date()));
+</script>
 ```
