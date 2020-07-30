@@ -5,10 +5,10 @@ declare module "number" {
      * created by keng42 @2020-07-27 09:52:59
      */
     export function pad(num: number, len?: number): string;
-    export const safeAdd: (a: number, b: number) => number;
-    export const safeSub: (a: number, b: number) => number;
-    export const safeMul: (a: number, b: number) => number;
-    export const safeDiv: (a: number, b: number) => number;
+    export function safeAdd(a: number, b: number): number;
+    export function safeSub(a: number, b: number): number;
+    export function safeMul(a: number, b: number): number;
+    export function safeDiv(a: number, b: number): number;
 }
 declare module "date" {
     export function deconstructDate(date: Date): {
@@ -35,16 +35,16 @@ declare module "type" {
      *
      * created by keng42 @2020-07-27 10:51:36
      */
-    export const isArray: (obj: any) => boolean;
-    export const isBoolean: (obj: any) => boolean;
-    export const isDate: (obj: any) => boolean;
-    export const isError: (obj: any) => boolean;
-    export const isFunction: (obj: any) => boolean;
-    export const isNull: (obj: any) => boolean;
-    export const isNumber: (obj: any) => boolean;
-    export const isRegExp: (obj: any) => boolean;
-    export const isString: (obj: any) => boolean;
-    export const isUndefined: (obj: any) => boolean;
+    export function isArray(obj: any): boolean;
+    export function isBoolean(obj: any): boolean;
+    export function isDate(obj: any): boolean;
+    export function isError(obj: any): boolean;
+    export function isFunction(obj: any): boolean;
+    export function isNull(obj: any): boolean;
+    export function isNumber(obj: any): boolean;
+    export function isRegExp(obj: any): boolean;
+    export function isString(obj: any): boolean;
+    export function isUndefined(obj: any): boolean;
 }
 declare module "sleep" {
     /**

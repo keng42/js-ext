@@ -34,7 +34,7 @@ function decodeNum(a: number, b: number) {
   };
 }
 
-export const safeAdd = (a: number, b: number) => {
+export function safeAdd(a: number, b: number) {
   let { r1, r2, aInt, bInt } = decodeNum(a, b);
 
   const c = Math.abs(r1 - r2);
@@ -49,9 +49,9 @@ export const safeAdd = (a: number, b: number) => {
 
   const m = Math.pow(10, Math.max(r1, r2));
   return (aInt + bInt) / m;
-};
+}
 
-export const safeSub = (a: number, b: number) => {
+export function safeSub(a: number, b: number) {
   let { r1, r2, aInt, bInt } = decodeNum(a, b);
 
   const c = Math.abs(r1 - r2);
@@ -66,18 +66,18 @@ export const safeSub = (a: number, b: number) => {
 
   const m = Math.pow(10, Math.max(r1, r2));
   return (aInt - bInt) / m;
-};
+}
 
-export const safeMul = (a: number, b: number) => {
+export function safeMul(a: number, b: number) {
   const { r1, r2, aInt, bInt } = decodeNum(a, b);
 
   const m = Math.pow(10, r1 + r2);
   return (aInt * bInt) / m;
-};
+}
 
-export const safeDiv = (a: number, b: number) => {
+export function safeDiv(a: number, b: number) {
   const { r1, r2, aInt, bInt } = decodeNum(a, b);
 
   const m = Math.pow(10, r1 - r2);
   return safeMul(aInt / bInt, m);
-};
+}

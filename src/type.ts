@@ -4,32 +4,42 @@
  * created by keng42 @2020-07-27 10:51:36
  */
 
-export const isArray = (obj: any) =>
-  Object.prototype.toString.call(obj) === `[object Array]`;
+export function isArray(obj: any) {
+  return Object.prototype.toString.call(obj) === `[object Array]`;
+}
 
-export const isBoolean = (obj: any) =>
-  Object.prototype.toString.call(obj) === `[object Boolean]`;
+export function isBoolean(obj: any) {
+  return Object.prototype.toString.call(obj) === `[object Boolean]`;
+}
 
-export const isDate = (obj: any) =>
-  Object.prototype.toString.call(obj) === `[object Date]`;
+export function isDate(obj: any) {
+  return Object.prototype.toString.call(obj) === `[object Date]`;
+}
 
-export const isError = (obj: any) =>
-  Object.prototype.toString.call(obj) === `[object Error]`;
+export function isError(obj: any) {
+  return Object.prototype.toString.call(obj) === `[object Error]`;
+}
 
-export const isFunction = (obj: any) =>
-  Object.prototype.toString.call(obj) === `[object Function]`;
+export function isFunction(obj: any) {
+  return Object.prototype.toString.call(obj) === `[object Function]`;
+}
 
-export const isNull = (obj: any) =>
-  Object.prototype.toString.call(obj) === `[object Null]`;
+export function isNull(obj: any) {
+  return Object.prototype.toString.call(obj) === `[object Null]`;
+}
 
-export const isNumber = (obj: any) =>
-  Object.prototype.toString.call(obj) === `[object Number]`;
+export function isNumber(obj: any) {
+  return Object.prototype.toString.call(obj) === `[object Number]`;
+}
 
-export const isRegExp = (obj: any) =>
-  Object.prototype.toString.call(obj) === `[object RegExp]`;
+export function isRegExp(obj: any) {
+  return Object.prototype.toString.call(obj) === `[object RegExp]`;
+}
 
-export const isString = (obj: any) =>
-  Object.prototype.toString.call(obj) === `[object String]`;
+export function isString(obj: any) {
+  return Object.prototype.toString.call(obj) === `[object String]`;
+}
 
-export const isUndefined = (obj: any) =>
-  Object.prototype.toString.call(obj) === `[object Undefined]`;
+export function isUndefined(obj: any) {
+  return Object.prototype.toString.call(obj) === `[object Undefined]`;
+}
