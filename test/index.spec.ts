@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import 'mocha';
-import * as jsExt from '../src/index';
+import jsExt from '../src/index';
 
 describe('Number utilities', () => {
   it('should return valid padded number string', () => {
