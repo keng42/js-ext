@@ -27,6 +27,7 @@ describe('Type utilities', () => {
     expect(jsExt.isRegExp(/\d+/)).to.be.equal(true);
     expect(jsExt.isString('0')).to.be.equal(true);
     expect(jsExt.isUndefined(undefined)).to.be.equal(true);
+    expect(jsExt.isObject({})).to.be.equal(true);
 
     expect(jsExt.isArray(0)).to.be.equal(false);
     expect(jsExt.isBoolean(0)).to.be.equal(false);
@@ -38,6 +39,7 @@ describe('Type utilities', () => {
     expect(jsExt.isRegExp(0)).to.be.equal(false);
     expect(jsExt.isString(0)).to.be.equal(false);
     expect(jsExt.isUndefined(0)).to.be.equal(false);
+    expect(jsExt.isObject(1)).to.be.equal(false);
   });
 });
 
