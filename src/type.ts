@@ -43,3 +43,7 @@ export function isString(obj: any) {
 export function isUndefined(obj: any) {
   return Object.prototype.toString.call(obj) === `[object Undefined]`;
 }
+
+export function isObject(obj: any) {
+  return Object.prototype.toString.call(obj) === `[object Object]`;
+}
