@@ -1,6 +1,6 @@
 {
   "name": "js-ext",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Some commonly used js functions",
   "main": "lib/cjs/index.js",
   "typings": "lib/cjs/index.d.ts",
